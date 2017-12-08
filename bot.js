@@ -1,6 +1,6 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
-var r = require('request')
+var searchRequest = require('request')
 
 var botID = process.env.BOT_ID;
 
