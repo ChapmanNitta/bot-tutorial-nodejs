@@ -39,7 +39,7 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" : price_usd
+    "text" : 'Anime Sucks'
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
