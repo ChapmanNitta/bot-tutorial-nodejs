@@ -21,7 +21,13 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  //botResponse = cool();
+  HTTPS.request('https://api.coinmarketcap.com/v1/ticker/bitcoin/', function(res){
+    if(res.statusCode == 200) {
+      botResponse = res.body;
+    }
+  })
+
+  botResponse = ''
 
   options = {
     hostname: 'api.groupme.com',
@@ -31,7 +37,7 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" : 'Anime sucks'
+    "text" : botResponse
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
