@@ -21,7 +21,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  var res_code;
+  var res_code = '';
 
   HTTPS.get('https://api.coinmarketcap.com/v1/ticker/bitcoin/', function(res) {
     res_code = res.statusCode;
@@ -40,7 +40,7 @@ function postMessage() {
     "text" : res_code
   };
 
-  console.log('sending ' + botResponse + ' to ' + botID);
+  console.log('sending ' + res_code + ' to ' + botID);
 
   botReq = HTTPS.request(options, function(res) {
       if(res.statusCode == 202) {
