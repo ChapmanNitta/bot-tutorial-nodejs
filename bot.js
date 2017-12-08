@@ -21,6 +21,12 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
+  var res_code;
+
+  HTTPS.get('https://api.coinmarketcap.com/v1/ticker/bitcoin/', function(res) {
+    res_code = res.statusCode;
+  })
+
   //botResponse = cool();
 
   options = {
@@ -31,7 +37,7 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" : 'Anime sucks'
+    "text" : res_code
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
