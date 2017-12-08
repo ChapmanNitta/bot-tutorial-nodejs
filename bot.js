@@ -22,14 +22,14 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  var price_usd = '';
-
-  request('https://api.coinmarketcap.com/v1/ticker/bitcoin/', function (error, response, body) {
-    console.log('error:', error); // Print the error if one occurred
-    console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-    console.log('body:', body); // Print the HTML for the Google homepage.
-    price_usd = body[0].price_usd;
-  });
+  // var price_usd = '';
+  //
+  // request('https://api.coinmarketcap.com/v1/ticker/bitcoin/', function (error, response, body) {
+  //   console.log('error:', error); // Print the error if one occurred
+  //   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+  //   console.log('body:', body); // Print the HTML for the Google homepage.
+  //   price_usd = body[0].price_usd;
+  // });
 
   options = {
     hostname: 'api.groupme.com',
