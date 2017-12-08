@@ -1,6 +1,5 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
-var request = require('request');
 
 var botID = process.env.BOT_ID;
 
@@ -22,14 +21,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  // var price_usd = '';
-  //
-  // request('https://api.coinmarketcap.com/v1/ticker/bitcoin/', function (error, response, body) {
-  //   console.log('error:', error); // Print the error if one occurred
-  //   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-  //   console.log('body:', body); // Print the HTML for the Google homepage.
-  //   price_usd = body[0].price_usd;
-  // });
+  //botResponse = cool();
 
   options = {
     hostname: 'api.groupme.com',
@@ -39,7 +31,7 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" : 'Anime Sucks'
+    "text" : 'Anime sucks'
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
